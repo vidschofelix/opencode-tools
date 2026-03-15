@@ -1,5 +1,5 @@
 # opencode-tools
-Because i mix then up all the time...
+Because i mix them up all the time...
 
 ## Context
 ### rtk (rust token killer)
