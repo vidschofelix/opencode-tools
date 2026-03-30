@@ -1,6 +1,14 @@
 # opencode-tools
 Because i mix them up all the time...
-## Context
+## Tooling
+### [opencode-claude-auth](https://github.com/griffinmartin/opencode-claude-auth)
+Uses your Claude Code credentials for OpenCode — no separate login needed.
+```jsonc
+// opencode.json
+{
+  "plugin": ["opencode-claude-auth"]
+}
+```
 ### [rtk](https://github.com/rtk-ai/rtk)
 CLI proxy that rewrites shell commands and filters their output before it reaches the LLM to save tokens.
 ```sh
@@ -15,11 +23,19 @@ Automatically prunes conversation context by summarizing stale messages and dedu
   "plugin": ["@tarquinen/opencode-dcp@latest"]
 }
 ```
+### [Context7](https://github.com/netresearch/context7-skill)
+Fetch up-to-date library documentation via Context7 REST API. Lightweight alternative to Context7 MCP with no persistent context overhead.
+```
+npx skills add https://github.com/netresearch/context7-skill --skill context7
+```
 ## Workflow
 ### [Superpowers](https://github.com/obra/superpowers)
 Skills framework that enforces structured dev workflows (brainstorming, TDD, plans, code review) automatically.
-```
-Fetch and follow instructions from https://raw.githubusercontent.com/obra/superpowers/refs/heads/main/.opencode/INSTALL.md
+```jsonc
+// opencode.json
+{
+  "plugin": ["superpowers@git+https://github.com/obra/superpowers.git"]
+}
 ```
 ## Development
 ### [DevBrowser](https://github.com/SawyerHood/dev-browser)
