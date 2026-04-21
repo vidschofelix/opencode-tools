@@ -1,6 +1,12 @@
 # opencode-tools
 Because i mix them up all the time...
 
+### [caveman](https://github.com/JuliusBrussee/caveman)
+Ultra-compressed output mode — agent talks like caveman, cutting ~75% of output tokens while keeping technical substance. Ships `caveman-commit`, `caveman-review`, `caveman-compress`, `caveman-help`.
+```sh
+npx skills add JuliusBrussee/caveman
+```
+opencode has no hook system, so caveman does not auto-activate. Either trigger per session (`/caveman`, "caveman mode") or paste the always-on snippet from the repo README into `~/.config/opencode/AGENTS.md`.
 ### [netresearch/context7](https://github.com/netresearch/context7-skill)
 Fetch up-to-date library documentation via Context7 REST API. Lightweight alternative to Context7 MCP with no persistent context overhead.
 ```
@@ -21,6 +27,11 @@ git clone https://github.com/sawyerhood/dev-browser /tmp/dev-browser-skill
 cp -r /tmp/dev-browser-skill/skills/dev-browser ~/.config/opencode/skills/dev-browser
 rm -rf /tmp/dev-browser-skill
 cd ~/.config/opencode/skills/dev-browser && npm install
+```
+### [grill-me](https://github.com/mattpocock/skills/tree/main/grill-me)
+Interviews you relentlessly about a plan or design, resolving each branch of the decision tree one question at a time. Use to stress-test designs before implementation.
+```sh
+npx skills@latest add mattpocock/skills/grill-me
 ```
 ### [opencode-claude-auth](https://github.com/griffinmartin/opencode-claude-auth)
 Uses your Claude Code credentials for OpenCode — no separate login needed.
